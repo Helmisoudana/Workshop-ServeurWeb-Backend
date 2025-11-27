@@ -18,6 +18,7 @@ Le projet utilise une architecture professionnelle et des technologies modernes 
 - Organiser un projet backend de manière propre et scalable
 
 ## 🏗 Architecture du Projet
+```
 project/
 │── models/
 │ ├── student.py
@@ -34,7 +35,7 @@ project/
 │── firebase_config.py
 │── database.py
 │── main.py
-
+```
 
 ## 🔁 Fonctionnalité principale : Rattrapage
 Lorsqu'une session de rattrapage est créée, elle est :
@@ -49,16 +50,7 @@ Exemple d’objet envoyé :
   "new_date": "2025-03-10 10:00",
   "reason": "Absent pour maladie"
 }
+```
+
 Ce workshop est destiné aux étudiants, développeurs débutants en FastAPI, et toute personne souhaitant apprendre à construire un backend professionnel.
 
-
----
-
-Si tu veux, je peux aussi t’ajouter :
-
-✅ Une section **Installation & Configuration**  
-✅ Une section **Exemples Postman**  
-✅ Un **logo** ou une **bannière GitHub**  
-✅ Un **diagramme UML** en Markdown  
-
-Dis-moi ce que tu veux ajouter !
