@@ -1,113 +1,64 @@
-🧠 Workshop : Gestion des Sessions, Absences et Rattrapages avec FastAPI, SQLModel & Firebase
+# 🧠 Workshop : Gestion des Sessions, Absences et Rattrapages avec FastAPI, SQLModel & Firebase
 
-Ce workshop a pour objectif d’apprendre à créer une application complète backend permettant de gérer :
+Ce workshop a pour objectif d'apprendre à construire une **API backend complète** permettant de gérer les enseignants, les étudiants, les sessions d’enseignement, les absences et les sessions de rattrapage.  
+Le projet utilise une architecture professionnelle et des technologies modernes telles que **FastAPI**, **SQLModel**, **MySQL** et **Firebase Realtime Database**.
 
-👩‍🏫 Les enseignants
+## 🚀 Technologies utilisées
+- **FastAPI** – Framework rapide pour créer des API REST
+- **SQLModel** – ORM moderne basé sur Pydantic + SQLAlchemy
+- **MySQL** – Base de données relationnelle
+- **Firebase Realtime Database** – Stockage en temps réel pour les rattrapages
+- **Python 3.10+**
 
-🎓 Les étudiants
+## 🎯 Objectifs du Workshop
+- Comprendre le fonctionnement d’une API REST
+- Manipuler MySQL à travers SQLModel
+- Gérer les relations entre les différents modèles (Teacher, Student, Session, Absence, MakeUpSession)
+- Enregistrer automatiquement les données des rattrapages dans Firebase
+- Organiser un projet backend de manière propre et scalable
 
-📅 Les sessions d’enseignement
-
-❌ Les absences
-
-🔁 Les sessions de rattrapage
-
-Le tout en utilisant des outils modernes, simples et professionnels.
-
-🚀 Technologies utilisées
-Technologie	Rôle
-FastAPI	Framework backend ultra rapide pour construire des API
-SQLModel	ORM moderne pour gérer les bases SQL
-MySQL	Base de données relationnelle
-Firebase Realtime Database	Stockage en temps réel des rattrapages
-Python	Langage principal du projet
-🎯 Objectifs du workshop
-
-✔ Comprendre comment construire une API REST
-✔ Manipuler MySQL avec SQLModel
-✔ Gérer les relations : enseignant → session → absence → rattrapage
-✔ Envoyer des données vers Firebase en temps réel
-✔ Créer un code propre, structuré et scalable
-
-🏗 Architecture du projet
+## 🏗 Architecture du Projet
 project/
 │── models/
-│     ├── student.py
-│     ├── teacher.py
-│     ├── session.py
-│     └── makeup.py
+│ ├── student.py
+│ ├── teacher.py
+│ ├── session.py
+│ └── makeup.py
 │
 │── routes/
-│     ├── student_routes.py
-│     ├── teacher_routes.py
-│     ├── session_routes.py
-│     └── makeup_routes.py
+│ ├── student_routes.py
+│ ├── teacher_routes.py
+│ ├── session_routes.py
+│ └── makeup_routes.py
 │
 │── firebase_config.py
 │── database.py
 │── main.py
 
-🔥 Fonctionnalités principales
-👨‍🏫 Gestion des enseignants
 
-Ajouter, lister, modifier, supprimer des enseignants.
+## 🔁 Fonctionnalité principale : Rattrapage
+Lorsqu'une session de rattrapage est créée, elle est :
+- enregistrée dans **MySQL** via SQLModel
+- envoyée automatiquement dans **Firebase Realtime Database**, en temps réel
 
-🎓 Gestion des étudiants
-
-Créer un étudiant, afficher ses infos, voir ses sessions.
-
-🗓 Gestion des sessions
-
-Créer une session pour un enseignant.
-Lister les sessions d’un étudiant.
-
-❌ Gestion des absences
-
-Enregistrer une absence pour un étudiant.
-
-🔁 Gestion des rattrapages
-
-Créer une session de rattrapage et :
-
-la sauvegarder dans MySQL
-
-l’envoyer automatiquement dans Firebase Realtime Database en temps réel
-
-🔥 Exemple : Enregistrement d’un rattrapage
-
-Quand on crée un rattrapage :
-
+Exemple d’objet envoyé :
+```json
 {
   "student_id": 1,
   "session_id": 3,
   "new_date": "2025-03-10 10:00",
   "reason": "Absent pour maladie"
 }
+Ce workshop est destiné aux étudiants, développeurs débutants en FastAPI, et toute personne souhaitant apprendre à construire un backend professionnel.
 
 
-Il est automatiquement ajouté :
+---
 
-dans la table makeupsession (MySQL)
+Si tu veux, je peux aussi t’ajouter :
 
-dans Firebase :
+✅ Une section **Installation & Configuration**  
+✅ Une section **Exemples Postman**  
+✅ Un **logo** ou une **bannière GitHub**  
+✅ Un **diagramme UML** en Markdown  
 
-makeup/
-   5/
-      student_id: 1
-      session_id: 3
-      new_date: "2025-03-10 10:00"
-      reason: "Absent pour maladie"
-
-🎓 Public cible
-
-Étudiants
-
-Débutants en FastAPI
-
-Développeurs voulant apprendre SQLModel
-
-Toute personne souhaitant créer un backend professionnel
-
-🤝 Contributeurs
-
-Helmi Soudana
+Dis-moi ce que tu veux ajouter !
